@@ -1,0 +1,43 @@
+{
+  "name": "wiseplatjs-abi",
+  "version": "0.6.5",
+  "description": "Decoder and encoder for the Wiseplat ABI",
+  "main": "index.js",
+  "dependencies": {
+    "bn.js": "^4.10.0",
+    "wiseplatjs-util": "^4.3.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.1.0",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha",
+    "coveralls": "npm run coverage && coveralls <coverage/lcov.info",
+    "lint": "standard",
+    "prepublish": "npm run lint && npm run test",
+    "test": "istanbul test _mocha -- --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiseplat/wiseplatjs-abi.git"
+  },
+  "keywords": [
+    "wiseplat",
+    "ABI"
+  ],
+  "author": "Alex Beregszaszi <alex@rtfs.hu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wiseplat/wiseplatjs-abi/issues"
+  },
+  "homepage": "https://github.com/wiseplat/wiseplatjs-abi",
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
+}
